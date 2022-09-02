@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v1.1.0
+
+- :bug: Use `res.send` to avoid auto-validation
+
 ### v1.0.1
 
 - :rocket: Bump Release
