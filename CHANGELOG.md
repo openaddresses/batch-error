@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v1.0.1
+
+- :rocket: Bump Release
+
 ### v1.0.0
 
 - :rocket: Intial Release
