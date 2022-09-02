@@ -3,7 +3,7 @@
     "type": "module",
     "root": true,
     "main": "index.js",
-    "version": "1.0.01",
+    "version": "1.0.1",
     "description": "OpenAddresses Error Handler",
     "repository": "git@github.com:openaddresses/batch-error",
     "author": "ingalls <nick@ingalls.ca>",
