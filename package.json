@@ -1,0 +1,25 @@
+{
+    "name": "@openaddresses/batch-error",
+    "type": "module",
+    "root": true,
+    "main": "index.js",
+    "version": "1.0.0",
+    "description": "OpenAddresses Error Handler",
+    "repository": "git@github.com:openaddresses/batch-error",
+    "author": "ingalls <nick@ingalls.ca>",
+    "license": "MIT",
+    "private": false,
+    "engines": {
+        "node": ">= 18"
+    },
+    "scripts": {
+        "test": "echo 'no tests'",
+        "lint": "eslint index.js"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "eslint": "^8.0.1",
+        "eslint-plugin-node": "^11.0.0"
+    }
+}
