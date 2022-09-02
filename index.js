@@ -15,7 +15,7 @@ export default class PublicError {
 
     static respond(err, res, messages = []) {
         if (err instanceof PublicError) {
-            res.status(err.status).json({
+            res.status(err.status).send({
                 status: err.status,
                 message: err.safe,
                 messages: messages
@@ -23,7 +23,7 @@ export default class PublicError {
 
         // Duplicate Express supported Error extensions
         } else if (err instanceof Error && (err.status || err.statusCode)) {
-            res.status(err.status || err.statusCode).json({
+            res.status(err.status || err.statusCode).send({
                 status: err.status || err.statusCode,
                 message: err.message || 'Generic Error',
                 messages: messages
@@ -33,7 +33,7 @@ export default class PublicError {
         } else {
             console.error(err);
 
-            res.status(500).json({
+            res.status(500).send({
                 status: 500,
                 message: 'Internal Server Error',
                 messages: messages
