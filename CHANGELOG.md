@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.0.0
+
+- :tada: Add typescript support
+
 ### v1.1.0
 
 - :bug: Use `res.send` to avoid auto-validation
