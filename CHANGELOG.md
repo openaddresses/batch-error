@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.0.2
+
+- :bug: Types in dep
+
 ### v2.0.1
 
 - :bug: Include TypeScript
