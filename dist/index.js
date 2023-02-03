@@ -6,7 +6,7 @@ export default class PublicError extends Error {
     safe;
     constructor(status, err, safe, print = true) {
         // Wrap postgres errors to ensure stack trace (line nums) are returned
-        if (err.hasOwnProperty('severity'))
+        if (Object.hasOwn(err, 'severity'))
             err = new Error(err.message);
         super(err ? err.message : safe);
         if (print && ![400, 401, 402, 403, 404].includes(status))
@@ -15,7 +15,7 @@ export default class PublicError extends Error {
         this.safe = safe;
     }
     static respond(err, res, messages = []) {
-        if (err instanceof Error && (err.hasOwnProperty('status') || err.hasOwnProperty('statusCode'))) {
+        if (err instanceof Error && (Object.hasOwn(err, 'status') || Object.hasOwn(err, 'statusCode'))) {
             const serr = err;
             err = new PublicError(serr.status || serr.statusCode, serr);
         }
