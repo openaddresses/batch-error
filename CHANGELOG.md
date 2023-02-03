@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.0.1
+
+- :bug: Include TypeScript
+
 ### v2.0.0
 
 - :tada: Add typescript support
