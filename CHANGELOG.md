@@ -10,9 +10,9 @@
 
 ## Version History
 
-### v2.0.2
+### v2.1.0
 
-- :bug: Types in dep
+- :bug: Migrate to ESLint & BugFixes on install
 
 ### v2.0.1
 
