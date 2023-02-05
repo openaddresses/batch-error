@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.1.2
+
+- :bug: Preserve safe field on conversion
+
 ### v2.1.1
 
 - :bug: Ensure error exists before returning as wrapped error
