@@ -22,10 +22,11 @@ export default class PublicError extends Error {
 
         this.status = status;
         this.safe = safe;
+        console.error('SAFE', this.safe);
     }
 
     static respond(err: unknown, res: Response, messages: object[] = []) {
-        if (err instanceof Error && (Object.hasOwn(err, 'status') || Object.hasOwn(err, 'statusCode'))) {
+        if (!(err instanceof PublicError) && err instanceof Error && (Object.hasOwn(err, 'status') || Object.hasOwn(err, 'statusCode'))) {
             const serr = err as StatusError;
             err = new PublicError(serr.status || serr.statusCode, serr);
         }
