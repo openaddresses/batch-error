@@ -22,7 +22,6 @@ export default class PublicError extends Error {
 
         this.status = status;
         this.safe = safe;
-        console.error('SAFE', this.safe);
     }
 
     static respond(err: unknown, res: Response, messages: object[] = []) {
