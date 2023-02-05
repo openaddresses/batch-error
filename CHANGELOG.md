@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.1.4
+
+- :rocket: Add automatic build to GH Action Releaser
+
 ### v2.1.3
 
 - :bug: Remove Debug Statement
