@@ -4,7 +4,7 @@
     "root": true,
     "main": "dist/index.js",
     "types": "index.ts",
-    "version": "2.1.2",
+    "version": "2.1.3",
     "description": "OpenAddresses Error Handler",
     "repository": "git@github.com:openaddresses/batch-error",
     "author": "ingalls <nick@ingalls.ca>",
