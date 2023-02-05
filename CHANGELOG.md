@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.1.1
+
+- :bug: Ensure error exists before returning as wrapped error
+
 ### v2.1.0
 
 - :bug: Migrate to ESLint & BugFixes on install

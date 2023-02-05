@@ -6,7 +6,7 @@ export default class PublicError extends Error {
     safe;
     constructor(status, err, safe, print = true) {
         // Wrap postgres errors to ensure stack trace (line nums) are returned
-        if (Object.hasOwn(err, 'severity'))
+        if (err && Object.hasOwn(err, 'severity'))
             err = new Error(err.message);
         super(err ? err.message : safe);
         if (print && ![400, 401, 402, 403, 404].includes(status))
