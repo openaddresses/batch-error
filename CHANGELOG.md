@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.2.0
+
+- :bug: Latest TS version uncovered some edge case behavior with types
+
 ### v2.1.4
 
 - :rocket: Add automatic build to GH Action Releaser
