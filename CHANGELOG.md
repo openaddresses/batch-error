@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.3.0
+
+- :arrow_up: Latest TS version
+
 ### v2.2.0
 
 - :bug: Latest TS version uncovered some edge case behavior with types
