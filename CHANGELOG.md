@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.3.1
+
+- :arrow_up: TS Error comparison fixes
+
 ### v2.3.0
 
 - :arrow_up: Latest TS version
