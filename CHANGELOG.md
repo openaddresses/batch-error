@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.3.2
+
+- :bug: Avoid instanceof dependance
+
 ### v2.3.1
 
 - :arrow_up: TS Error comparison fixes

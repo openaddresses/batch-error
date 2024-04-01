@@ -3,6 +3,7 @@ import { Response } from 'express';
 interface StatusError extends Error {
     status?: number;
     statusCode?: number
+    safe?: string;
 }
 
 /**
@@ -27,21 +28,17 @@ export default class PublicError extends Error {
     }
 
     static respond(err: unknown, res: Response, messages: object[] = []) {
-        if (!(err instanceof PublicError) && err instanceof Error && (Object.hasOwn(err, 'status') || Object.hasOwn(err, 'statusCode'))) {
+        if (typeof err === 'object') {
             const serr = err as StatusError;
-            err = new PublicError(serr.status || serr.statusCode || 500, serr);
-        }
 
-        if (err instanceof PublicError) {
-            res.status(err.status).send({
-                status: err.status,
-                message: err.safe,
+            if ((Object.hasOwn(serr, 'status') ? serr.status : 500) === 500) console.error(err);
+            res.status(Object.hasOwn(serr, 'status') ? serr.status : 500).send({
+                status: Object.hasOwn(serr, 'status') ? serr.status : 500,
+                message: Object.hasOwn(serr, 'safe') ? serr.safe : 'Internal Server Error',
                 messages
             });
-        // Handle generic errors
         } else {
             console.error(err);
-
             res.status(500).send({
                 status: 500,
                 message: 'Internal Server Error',
