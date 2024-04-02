@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.3.3
+
+- :bug: Further extends fixes
+
 ### v2.3.2
 
 - :bug: Avoid instanceof dependance

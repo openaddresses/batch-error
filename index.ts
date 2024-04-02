@@ -19,12 +19,13 @@ export default class PublicError extends Error {
 
         super(err ? err.message : safe);
 
-        Object.setPrototypeOf(this, PublicError.prototype);
-
         if (print && ![400, 401, 402, 403, 404].includes(status)) console.error(err ? err : 'Error: ' + safe);
 
         this.status = status;
         this.safe = safe || 'Generic Error';
+
+        this.name = 'PublicError';
+        Error.captureStackTrace(this, this.constructor);
     }
 
     static respond(err: unknown, res: Response, messages: object[] = []) {
