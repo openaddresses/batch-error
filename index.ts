@@ -32,9 +32,13 @@ export default class PublicError extends Error {
         if (typeof err === 'object') {
             const serr = err as StatusError;
 
-            if ((Object.hasOwn(serr, 'status') ? serr.status : 500) === 500) console.error(err);
-            res.status(Object.hasOwn(serr, 'status') ? serr.status : 500).send({
-                status: Object.hasOwn(serr, 'status') ? serr.status : 500,
+            const status = Object.hasOwn(serr, 'status') ? (!isNaN(Number(serr.status)) ? Number(serr.status) : 500 ) : 500;
+            if (status === 500) {
+                console.error(err);
+            }
+
+            res.status(status).send({
+                status: status,
                 message: Object.hasOwn(serr, 'safe') ? serr.safe : 'Internal Server Error',
                 messages
             });

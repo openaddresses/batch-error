@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.4.0
+
+- :arrow_up: Update typescript and fix related build issues around status code parsing
+
 ### v2.3.3
 
 - :bug: Further extends fixes
