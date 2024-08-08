@@ -10,9 +10,13 @@
 
 ## Version History
 
+### v2.7.0
+
+- :arrow_up: ES2022 => ESNext
+
 ### v2.6.0
 
-- :warrow_up: Update Core Deps
+- :arrow_up: Update Core Deps
 
 ### v2.5.0
 
