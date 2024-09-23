@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.8.0
+
+- :bug: Ensure headers haven't been sent before attempting to send error
+
 ### v2.7.0
 
 - :arrow_up: ES2022 => ESNext

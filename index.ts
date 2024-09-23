@@ -37,18 +37,26 @@ export default class PublicError extends Error {
                 console.error(err);
             }
 
-            res.status(status).send({
-                status: status,
-                message: Object.hasOwn(serr, 'safe') ? serr.safe : 'Internal Server Error',
-                messages
-            });
+            if (!res.headersSent) {
+                res.status(status).send({
+                    status: status,
+                    message: Object.hasOwn(serr, 'safe') ? serr.safe : 'Internal Server Error',
+                    messages
+                });
+            } else {
+                res.end();
+            }
         } else {
             console.error(err);
-            res.status(500).send({
-                status: 500,
-                message: 'Internal Server Error',
-                messages
-            });
+            if (!res.headersSent) {
+                res.status(500).send({
+                    status: 500,
+                    message: 'Internal Server Error',
+                    messages
+                });
+            } else {
+                res.end();
+            }
         }
     }
 }
