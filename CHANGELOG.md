@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.9.0
+
+- :arrow_up: Update Express Types
+
 ### v2.8.0
 
 - :bug: Ensure headers haven't been sent before attempting to send error
