@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.10.0
+
+- :arrow_up: Update Deps
+
 ### v2.9.0
 
 - :arrow_up: Update Express Types
