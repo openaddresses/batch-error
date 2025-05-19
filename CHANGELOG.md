@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.11.0
+
+- :rocket: Don't Log 200 Status code resonses
+
 ### v2.10.0
 
 - :arrow_up: Update Deps
