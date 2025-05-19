@@ -24,7 +24,12 @@ export default class PublicError extends Error {
 
         super(err ? err.message : safe);
 
-        if (print && ![200, 400, 401, 402, 403, 404].includes(status)) console.error(err ? err : 'Error: ' + safe);
+        if (print
+            && !(status >= 200 && status <= 299)
+            && !(status >= 400 && status <= 404)
+        ) {
+            console.error(err ? err : 'Error: ' + safe);
+        }
 
         this.status = status;
         this.safe = safe || 'Generic Error';
