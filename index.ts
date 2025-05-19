@@ -13,13 +13,23 @@ export default class PublicError extends Error {
     status: number;
     safe: string;
 
-    constructor(status: number, err?: Error | null, safe?: string, print = true) {
+    constructor(
+        status: number,
+        err: Error | null | undefined,
+        safe: string | undefined,
+        print = true
+    ) {
         // Wrap postgres errors to ensure stack trace (line nums) are returned
         if (err && Object.hasOwn(err, 'severity')) err = new Error(err.message);
 
         super(err ? err.message : safe);
 
-        if (print && ![400, 401, 402, 403, 404].includes(status)) console.error(err ? err : 'Error: ' + safe);
+        if (print
+            && !(status >= 200 && status <= 299)
+            && !(status >= 400 && status <= 404)
+        ) {
+            console.error(err ? err : 'Error: ' + safe);
+        }
 
         this.status = status;
         this.safe = safe || 'Generic Error';
@@ -28,7 +38,10 @@ export default class PublicError extends Error {
         Error.captureStackTrace(this, this.constructor);
     }
 
-    static respond(err: unknown, res: Response, messages: object[] = []) {
+    static respond(
+        err: unknown,
+        res: Response, messages: object[] = []
+    ) {
         if (typeof err === 'object') {
             const serr = err as StatusError;
 
