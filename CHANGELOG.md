@@ -10,6 +10,11 @@
 
 ## Version History
 
+### v2.13.0
+
+- :arrow_up: Update Deps
+- :rocket: Warn on 4xx Errors
+
 ### v2.12.0
 
 - :arrow_up: Update Deps
