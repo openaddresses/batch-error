@@ -28,7 +28,7 @@ export default class PublicError extends Error {
             && !(status >= 200 && status <= 299)
             && !(status >= 401 && status <= 404)
         ) {
-            if (status = 400) {
+            if (status === 400) {
                 console.warn(err ? err : 'Warning: ' + safe);
             } else {
                 console.error(err ? err : 'Error: ' + safe);

@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.13.1
+
+- :bug: Fix status check
+
 ### v2.13.0
 
 - :arrow_up: Update Deps
