@@ -10,6 +10,10 @@
 
 ## Version History
 
+### v2.14.1
+
+- :rocket: GH Actions Trusted Publisher
+
 ### v2.14.0
 
 - :arrow_up: Update Core Deps

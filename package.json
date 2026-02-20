@@ -6,7 +6,10 @@
     "types": "index.ts",
     "version": "2.14.0",
     "description": "OpenAddresses Error Handler",
-    "repository": "git@github.com:openaddresses/batch-error",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/openaddresses/batch-error.git"
+    },
     "author": "ingalls <nick@ingalls.ca>",
     "license": "MIT",
     "private": false,
