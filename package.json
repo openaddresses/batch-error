@@ -4,7 +4,7 @@
     "root": true,
     "main": "dist/index.js",
     "types": "index.ts",
-    "version": "2.14.0",
+    "version": "2.14.1",
     "description": "OpenAddresses Error Handler",
     "repository": {
         "type": "git",
